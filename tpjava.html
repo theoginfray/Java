@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>TP JavaScript</title>
+</head>
+<body>
+    <h1>TP JavaScript</h1>
+    <script type="text/javascript" 
+    language="JavaScript">
+    function verif(){
+        window.alert("Vous avez cliqué sur le bouton");
+    }
+    function verif2(param){
+        window.alert("Vous avez passé la souris sur le lien"+param);
+    }
+    function copy(){
+
+        document.getElementById("champ2").value = document.getElementById("champ1").value;
+    }
+    document.writeln("C'est un test d'affichage");
+    document.writeln("<p>ligne1</p>");
+    document.writeln("<p>ligne2</p>");
+    document.writeln("<p>ligne3</p>");
+    document.writeln("<p>ligne4</p>");
+    document.writeln("<p>ligne5</p>");
+        
+    var val = 20;
+       
+    document.writeln(val);
+    
+    
+    function test(){
+        document.getElementById("champ3").value = document.getElementById("liste")[document.getElementById("liste").selectedIndex].value;
+    }
+   
+
+    </script>
+    <br><button onclick="verif()">Appuyez ici</button><br>
+    <br>
+    <a onmouseOver="verif2(' numéro 1')" href="tpjava.html">Lien</a><br>
+    <br>
+    <input type="text" name="champ1" id="champ1">
+    
+    <button onclick="copy()">Copier</button>
+   
+    <input type="text" name="champ2" id="champ2"><br>
+    <br>
+    <select name="liste" id="liste"  onchange="test()">
+        <option value=Capitale>Pays
+        <option value=Londres>Angleterre
+        <option value=Tokyo>Japon
+        <option value=Washington>Etats-Unis
+            
+    </select><br>
+    <br>
+    <input type="text" name="champ3" id="champ3" value="Capitale">
+
+
+
+</body>
+</html>
